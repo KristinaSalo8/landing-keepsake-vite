@@ -1,0 +1,64 @@
+@use '../utils' as *;
+
+.btn {
+  @include flex-center(inline-flex);
+  min-height: 40px;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  font-family: var(--font-heading);
+  font-size: var(--fs-nav);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  @include transition-safe(background-color 0.2s, color 0.2s, border-color 0.2s);
+
+  svg {
+    flex: none;
+    margin-right: 8px;
+  }
+
+  &:focus-visible {
+    @include focus-ring(var(--color-text-dark), 2px);
+  }
+
+  &--primary {
+    background: var(--color-accent);
+    color: var(--color-white);
+
+    &:hover {
+      background: var(--color-accent-hover);
+    }
+  }
+
+  &--secondary {
+    background: var(--color-white);
+    color: var(--color-text-dark);
+    border-color: var(--color-border);
+
+    svg {
+      color: var(--color-accent);
+    }
+
+    &:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+  }
+
+  &--block {
+    display: flex;
+    width: 100%;
+  }
+
+  &--block-sm {
+    display: flex;
+    width: 100%;
+
+    @include mq(md) {
+      display: inline-flex;
+      width: auto;
+    }
+  }
+}
