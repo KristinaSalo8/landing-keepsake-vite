@@ -1,0 +1,7 @@
+section.stats(aria-label="Keepsake in numbers")
+  .container
+    ul.stats__list
+      each stat in stats
+        li.stat
+          p.stat__num= stat.num
+          p.stat__label= stat.label
