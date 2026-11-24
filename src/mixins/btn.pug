@@ -1,5 +1,4 @@
-//- Кнопка-посилання. modifiers: ['primary', 'block'] -> btn--primary btn--block
-//- Приклад: +btn('Get in touch', '#contact', ['secondary'])(aria-label="Contact us")
+
 mixin btn(text, href = '#', modifiers = [], iconName = null)
   - const mods = [].concat(modifiers)
   a.btn(href=href class=mods.map((m) => `btn--${m}`))&attributes(attributes)

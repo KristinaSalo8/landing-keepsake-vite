@@ -1,0 +1,13 @@
+//- Картка роботи портфоліо. Дані: { title, category, image, alt, href?, eager? }
+mixin work-card(work)
+  - const label = work.category.charAt(0).toUpperCase() + work.category.slice(1)
+  li.card(data-category=work.category)
+    article.card__box
+      a.card__link(href=work.href || '#')
+        +picture(work.image, work.alt, { width: 600, height: 474, className: 'card__img', lazy: !work.eager })
+        span.card__overlay
+          span.card__plus(aria-hidden="true")
+            +icon('plus')
+          span.card__title= work.title
+          span.card__line(aria-hidden="true")
+          span.card__cat= label
