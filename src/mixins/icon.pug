@@ -1,0 +1,23 @@
+//- Інлайн-SVG іконка за назвою. Додаткові атрибути: +icon('heart')(class="fav__icon")
+mixin icon(name)
+  case name
+    when 'chevron'
+      svg.icon.icon--chevron(width="8" height="13" viewBox="0 0 8 13" aria-hidden="true" focusable="false")&attributes(attributes)
+        path(d="M1 1l5.5 5.5L1 12" stroke="currentColor" stroke-width="1.2" fill="none")
+    when 'mail'
+      svg.icon.icon--mail(width="14" height="10" viewBox="0 0 14 10" aria-hidden="true" focusable="false")&attributes(attributes)
+        path(d="M.5.5h13v9H.5zM.5.5 7 5.5 13.5.5" stroke="currentColor" fill="none")
+    when 'heart'
+      svg.icon.icon--heart(width="16" height="14" viewBox="0 0 16 14" aria-hidden="true" focusable="false")&attributes(attributes)
+        path(d="M8 14 1.4 7.6A4.1 4.1 0 0 1 8 2.5a4.1 4.1 0 0 1 6.6 5.1z" fill="currentColor")
+    when 'plus'
+      svg.icon.icon--plus(width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false")&attributes(attributes)
+        path(d="M9 2v14M2 9h14" stroke="currentColor" stroke-width="2" fill="none")
+    when 'arrow-up'
+      svg.icon.icon--arrow-up(width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false")&attributes(attributes)
+        path(d="M9 16V3M3 8.5 9 2.5l6 6" stroke="currentColor" stroke-width="2" fill="none")
+    when 'arrow-right'
+      svg.icon.icon--arrow-right(width="6" height="9" viewBox="0 0 6 9" aria-hidden="true" focusable="false")&attributes(attributes)
+        path(d="M1 1l3.5 3.5L1 8" stroke="currentColor" stroke-width="1.5" fill="none")
+    default
+      - throw new Error(`Unknown icon: ${name}`)
