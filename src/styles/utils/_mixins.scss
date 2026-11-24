@@ -17,8 +17,3 @@
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
-@mixin transition-safe($value...) {
-  @media (prefers-reduced-motion: no-preference) {
-    transition: $value;
-  }
-}

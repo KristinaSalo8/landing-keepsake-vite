@@ -1,0 +1,9 @@
+@use '../utils' as *;
+
+.journal {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+  }
+}

@@ -12,7 +12,6 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
-  @include transition-safe(background-color 0.2s, color 0.2s, border-color 0.2s);
 
   svg {
     flex: none;

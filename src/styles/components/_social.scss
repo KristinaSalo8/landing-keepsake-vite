@@ -1,0 +1,48 @@
+@use '../utils' as *;
+
+.socials {
+  display: flex;
+
+  &__item {
+    margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.social {
+  @include flex-center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-family: var(--font-heading);
+  font-size: rem(11);
+  text-transform: lowercase;
+  color: var(--color-white);
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &--rss {
+    background: var(--color-social-rss);
+  }
+
+  &--f {
+    background: var(--color-social-fb);
+  }
+
+  &--tw {
+    background: var(--color-social-tw);
+  }
+
+  &--dr {
+    background: var(--color-social-dr);
+  }
+
+  &--p {
+    background: var(--color-social-p);
+  }
+}

@@ -1,0 +1,54 @@
+@use '../utils' as *;
+
+.client {
+  flex: 0 0 50%;
+  height: 72px;
+  @include flex-center;
+
+  @include mq(md) {
+    flex-basis: 33.3333%;
+  }
+
+  @include mq(lg) {
+    flex-basis: 16.6666%;
+  }
+
+  &__logo {
+    font-size: rem(20);
+    line-height: 1;
+    color: var(--color-client-logo);
+    &--a {
+      font-family: var(--font-body);
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    &--b {
+      font-family: var(--font-body);
+      font-weight: 300;
+    }
+
+    &--c {
+      font-family: var(--font-heading);
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+
+    &--d {
+      font-family: var(--font-body);
+      font-weight: 700;
+    }
+
+    &--e {
+      font-family: Georgia, serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    &--f {
+      font-family: var(--font-body);
+      font-weight: 300;
+    }
+  }
+}

@@ -55,7 +55,6 @@
     background: var(--color-overlay);
     text-align: center;
     opacity: 0;
-    @include transition-safe(opacity 0.25s);
   }
   &__plus {
     @include flex-center;

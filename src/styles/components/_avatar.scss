@@ -1,0 +1,14 @@
+@use '../utils' as *;
+
+.avatar {
+  @include flex-center;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+  border-radius: 50%;
+  background: var(--color-teal);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: rem(14);
+}

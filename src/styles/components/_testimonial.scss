@@ -1,0 +1,50 @@
+@use '../utils' as *;
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 20px;
+  background: var(--color-bg-light);
+
+  @include mq(md) {
+    padding: 40px 48px;
+  }
+
+  &__mark {
+    font-family: Georgia, serif;
+    font-size: rem(44);
+    line-height: 0.8;
+    color: var(--color-accent);
+  }
+
+  &__quote {
+    margin: 16px 0 24px;
+    font-size: var(--fs-quote);
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+  }
+
+  &__who {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-family: var(--font-heading);
+    font-size: rem(13);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-text-dark);
+  }
+
+  &__role {
+    font-size: rem(12);
+    color: var(--color-muted);
+  }
+}

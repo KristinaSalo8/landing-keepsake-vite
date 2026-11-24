@@ -1,0 +1,11 @@
+@use '../utils' as *;
+
+.services {
+  padding-top: 0;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+  }
+}

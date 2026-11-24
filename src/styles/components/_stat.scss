@@ -1,0 +1,28 @@
+@use '../utils' as *;
+
+.stat {
+  flex: 0 0 50%;
+  padding-bottom: 24px;
+  text-align: center;
+
+  @include mq(md) {
+    flex-basis: 25%;
+    padding-bottom: 0;
+  }
+
+  &__num {
+    font-family: var(--font-heading);
+    font-size: var(--fs-stat);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--color-text-dark);
+  }
+
+  &__label {
+    font-family: var(--font-heading);
+    font-size: rem(11);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+}

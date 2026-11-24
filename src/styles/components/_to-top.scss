@@ -1,0 +1,23 @@
+@use '../utils' as *;
+
+.to-top {
+  @include flex-center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 90;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-white);
+  box-shadow: 0 4px 12px rgb(249 88 88 / 40%);
+
+  &:hover {
+    background: var(--color-accent-hover);
+  }
+
+  &:focus-visible {
+    @include focus-ring(var(--color-text-dark), 2px);
+  }
+}

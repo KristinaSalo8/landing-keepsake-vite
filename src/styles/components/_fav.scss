@@ -9,7 +9,6 @@
     margin-left: 24px;
     background: var(--color-accent);
     color: var(--color-white);
-    @include transition-safe(background-color 0.2s);
     &:hover {
       background: var(--color-accent-hover);
     }
