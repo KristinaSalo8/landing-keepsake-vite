@@ -1,4 +1,3 @@
-//- Картка роботи портфоліо. Дані: { title, category, image, alt, href?, eager? }
 mixin work-card(work)
   - const label = work.category.charAt(0).toUpperCase() + work.category.slice(1)
   li.card(data-category=work.category)

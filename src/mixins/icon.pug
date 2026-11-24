@@ -1,4 +1,3 @@
-
 mixin icon(name)
   case name
     when 'chevron'
@@ -19,5 +18,22 @@ mixin icon(name)
     when 'arrow-right'
       svg.icon.icon--arrow-right(width="6" height="9" viewBox="0 0 6 9" aria-hidden="true" focusable="false")&attributes(attributes)
         path(d="M1 1l3.5 3.5L1 8" stroke="currentColor" stroke-width="1.5" fill="none")
+    when 'web'
+      svg.icon.icon--web(width="48" height="48" viewBox="0 0 48 48" aria-hidden="true" focusable="false")&attributes(attributes)
+        rect(x="6" y="10" width="36" height="25" fill="#7C8DA8")
+        rect(x="10" y="14" width="28" height="17" fill="#8FD3C5")
+        rect(x="18" y="37" width="12" height="3" fill="#7C8DA8")
+    when 'motion'
+      svg.icon.icon--motion(width="48" height="48" viewBox="0 0 48 48" aria-hidden="true" focusable="false")&attributes(attributes)
+        rect(x="8" y="9" width="32" height="28" fill="#46506A")
+        rect(x="12" y="13" width="24" height="20" fill="#7FC2DA")
+        rect(x="18" y="39" width="12" height="3" fill="#46506A")
+    when 'print'
+      svg.icon.icon--print(width="48" height="48" viewBox="0 0 48 48" aria-hidden="true" focusable="false")&attributes(attributes)
+        rect(x="10" y="26" width="28" height="14" fill="#8B93A5")
+        rect(x="16" y="14" width="16" height="12" fill="#F2B63D")
+    when 'illustration'
+      svg.icon.icon--illustration(width="48" height="48" viewBox="0 0 48 48" aria-hidden="true" focusable="false")&attributes(attributes)
+        path(d="M24 40 8 24a9 9 0 0 1 16-7 9 9 0 0 1 16 7z" fill="#F95858")
     default
       - throw new Error(`Unknown icon: ${name}`)
