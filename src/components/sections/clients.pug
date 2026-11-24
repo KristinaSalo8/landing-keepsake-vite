@@ -3,7 +3,6 @@
     each client in clients
       li.client
         span.client__logo(class=`logo-${client.key}`)= client.name
-  //- figcaption має бути першою або останньою дитиною figure, тому .dots стоїть перед нею (візуально переносимо вниз через CSS order)
   figure.testimonial
     span.testimonial__mark(aria-hidden="true") “
     blockquote.testimonial__quote

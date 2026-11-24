@@ -1,0 +1,56 @@
+@use '../utils' as *;
+
+:root {
+  @each $name, $value in $colors {
+    --color-#{$name}: #{$value};
+  }
+  @each $name, $value in $fonts {
+    --font-#{$name}: #{$value};
+  }
+  --fs-h1: 26px;
+  --fs-cta: 22px;
+  --fs-nav: 12px;
+  --fs-quote: 16px;
+  --fs-stat: 38px;
+  --fs-logo: 22px;
+  --fs-logo-k: 34px;
+  --section-y: 56px;
+  --pad-x: 20px;
+  --header-h: 64px;
+  --gutter: 12px;
+  --container: #{$container-max-width};
+  --service-icon: 72px;
+  --post-img: 96px;
+  --card-ratio: 1 / 0.72;
+}
+
+@include mq(md) {
+  :root {
+    --fs-h1: 32px;
+    --fs-cta: 24px;
+    --fs-nav: 13px;
+    --fs-quote: 19px;
+    --fs-stat: 40px;
+    --fs-logo: 26px;
+    --fs-logo-k: 40px;
+    --section-y: 72px;
+    --pad-x: 40px;
+    --header-h: 80px;
+    --service-icon: 96px;
+    --post-img: 150px;
+    --card-ratio: 1 / 0.79;
+  }
+}
+
+@include mq(lg) {
+  :root {
+    --fs-h1: 40px;
+    --fs-cta: 28px;
+    --fs-quote: 22px;
+    --fs-stat: 48px;
+    --section-y: 90px;
+    --pad-x: 90px;
+    --header-h: 100px;
+    --gutter: 14px;
+  }
+}

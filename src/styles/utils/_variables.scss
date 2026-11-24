@@ -1,0 +1,32 @@
+$colors: (
+  'accent': #f95858,
+  'accent-hover': #e44646,
+  'teal': #2cd5c4,
+  'text-dark': #3a3a3c,
+  'text': #666a6e,
+  'muted': #9aa0a6,
+  'bg-light': #f0f3f4,
+  'border': #e1e5e8,
+  'footer': #2a2a2d,
+  'white': #fff,
+  'overlay': rgb(30 32 36 / 82%),
+  'social-rss': #f8a83d,
+  'social-fb': #4b6ab0,
+  'social-tw': #1eb5e5,
+  'social-dr': #ee80b0,
+  'social-p': #e5444a,
+  'client-logo': #b7bcc2,
+  'footer-line': #3c3c40,
+  'footer-field': #38383c,
+  'success-bg': #2d3b3d,
+);
+
+$fonts: (
+  'heading': ('Oswald', Arial, sans-serif),
+  'body': ('Open Sans', Arial, sans-serif),
+  'logo': ('Dancing Script', cursive),
+);
+
+$container-max-width: 1100px;
+$work-categories: (all, branding, identity, print, web, motion);
+$work-filters: (branding, identity, print, web, motion);

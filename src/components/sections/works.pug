@@ -1,13 +1,13 @@
 section#works.works.section(aria-labelledby="works-title")
   .container
     each cat, i in categories
-      input.filter__input(type="radio" name="works-filter" id=`f-${cat.id}` checked=(i === 0))
+      input.filter__input(class=`filter__input--${cat.id}` type="radio" name="works-filter" id=`f-${cat.id}` checked=(i === 0))
     .works__head
       h2#works-title.section-title Our awesome works
       ul.chips(aria-label="Filter works by category")
         each cat in categories
-          li
-            label.chip(for=`f-${cat.id}`)= cat.label
+          li.chips__item
+            label.chip(class=`chip--${cat.id}` for=`f-${cat.id}`)= cat.label
     ul.works__grid
       each work in works
         +work-card(work)

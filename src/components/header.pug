@@ -15,14 +15,14 @@ header.header
               = item.text
               +icon('chevron')(class="menu__chev")
       .menu__extra
-        +btn('Contact us', '#contact', ['primary', 'block'], 'mail')
-        +btn('Favourites', '#', ['secondary', 'block'], 'heart')
+        +btn('Contact us', '#contact', ['primary', 'block'], 'mail')(class="menu__btn")
+        +btn('Favourites', '#', ['secondary', 'block'], 'heart')(class="menu__btn")
         .menu__contacts
           p.menu__hello Say hello
           p.menu__line
             a(href=`mailto:${contacts.email}`)= contacts.email
           p.menu__line
             a(href=`tel:${contacts.phoneHref}`)= contacts.phone
-          include socials
+          +social-list
     a.fav(href="#" aria-label="Favourites")
       +icon('heart')

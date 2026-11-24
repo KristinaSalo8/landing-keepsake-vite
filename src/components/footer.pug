@@ -7,9 +7,9 @@ footer.footer
             h2.footer__title= col.title
             ul.footer__links
               each link in col.links
-                li
+                li.footer__item
                   if link.href
-                    a(href=link.href)= link.text
+                    a.footer__link(href=link.href)= link.text
                   else
                     span= link.text
       #newsletter.newsletter
@@ -18,7 +18,7 @@ footer.footer
           p.newsletter__text Fresh case studies and design notes, once a month.
           label.visually-hidden(for="email") Your email address
           input.newsletter__input(type="email" id="email" name="email" placeholder="Your email address" required aria-describedby="email-error")
-          button.btn.btn--primary.btn--block(type="submit") Subscribe
+          button.btn.btn--primary.btn--block.newsletter__submit(type="submit") Subscribe
           p#email-error.newsletter__error Please enter a valid email address.
           .newsletter__agree
             input.newsletter__check(type="checkbox" id="agree" name="agree" required)
@@ -30,6 +30,6 @@ footer.footer
           p.newsletter__note One email a month. No spam, unsubscribe anytime.
     .footer__bottom
       p.footer__copy= copyright
-      include socials
+      +social-list()(class="footer__socials")
 a.to-top(href="#top" aria-label="Back to top")
   +icon('arrow-up')
