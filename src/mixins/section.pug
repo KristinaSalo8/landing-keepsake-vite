@@ -1,8 +1,0 @@
-mixin section(name, title, lead, anchor = true)
-  section.section(id=(anchor ? name : false) class=name aria-labelledby=`${name}-title`)&attributes(attributes)
-    .container
-      h2.section-title(id=`${name}-title`)= title
-      if lead
-        p.section-lead= lead
-      if block
-        block

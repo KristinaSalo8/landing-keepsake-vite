@@ -1,14 +1,16 @@
-+section('journal', 'From the journal', 'Notes on process, case studies and things that inspire us.')
-  ul.journal__list
-    each post in posts
-      li.post
-        article.post__box
-          +picture(post.image, post.alt || '', { width: 300, height: 300, className: 'post__img' })
-          .post__body
-            p.post__meta
-              time(datetime=post.date)= formatDate(post.date)
-              |  / #{post.category}
-            h3.post__title= post.title
-            p.post__text= post.text
-            a.post__more(href=post.href || '#')
-              | Read more #[+icon('arrow-right')]
+section#journal.journal.section(aria-labelledby="journal-title")
+  .container
+    +section-head('From the journal', 'journal-title', 'Notes on process, case studies and things that inspire us.')
+    ul.journal__list
+      each post in posts
+        li.post
+          article.post__box
+            +picture(post.image, post.alt || '', 800, 800, true, 'post__img', '(min-width: 768px) 150px, 96px')
+            .post__body
+              p.post__meta
+                time(datetime=post.date)= formatDate(post.date)
+                |  / #{post.category}
+              h3.post__title= post.title
+              p.post__text= post.text
+              a.post__more(href=post.href || '#')
+                | Read more #[+icon('arrow-right')]

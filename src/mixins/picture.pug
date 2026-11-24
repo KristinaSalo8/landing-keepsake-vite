@@ -1,4 +1,5 @@
-mixin picture(name, alt = '', opts = {})
-  - const { width, height, className, lazy = true, priority = false } = opts
+mixin picture(name, alt, width = 800, height = 632, lazy = true, imgClass = 'card__img', sizes = '(min-width: 1280px) 357px, (min-width: 768px) 50vw, 100vw')
   picture
-    img(class=className src=`/src/assets/images/${name}.jpg` alt=alt width=width height=height loading=(lazy ? 'lazy' : false) decoding="async" fetchpriority=(priority ? 'high' : false))
+    source(type="image/avif" srcset=`/src/assets/images/${name}-400.avif 400w, /src/assets/images/${name}-800.avif 800w` sizes=sizes)
+    source(type="image/webp" srcset=`/src/assets/images/${name}-400.webp 400w, /src/assets/images/${name}-800.webp 800w` sizes=sizes)
+    img(class=imgClass src=`/src/assets/images/${name}-800.jpg` alt=alt width=width height=height loading=(lazy ? 'lazy' : false) decoding="async" fetchpriority=(lazy ? false : 'high'))
