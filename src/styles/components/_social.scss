@@ -1,17 +1,5 @@
 @use '../utils' as *;
 
-.socials {
-  display: flex;
-
-  &__item {
-    margin-right: 12px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-}
-
 .social {
   @include flex-center;
   width: 34px;
