@@ -35,5 +35,9 @@ mixin icon(name)
     when 'illustration'
       svg.icon.icon--illustration(width="48" height="48" viewBox="0 0 48 48" aria-hidden="true" focusable="false")&attributes(attributes)
         path(d="M24 40 8 24a9 9 0 0 1 16-7 9 9 0 0 1 16 7z" fill="#F95858")
+    when 'check'
+      svg.icon.icon--check(width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false")&attributes(attributes)
+        circle(cx="12" cy="12" r="12" fill="#2CD5C4")
+        path(d="M7 12.5l3.5 3.5L17 9" stroke="#fff" stroke-width="2" fill="none")
     default
       - throw new Error(`Unknown icon: ${name}`)

@@ -2,19 +2,16 @@ extends ../layouts/main
 
 block title
   title Keepsake — Digital &amp; Branding Agency
-
 append meta
   include ../includes/meta
-
 block fonts
   include ../includes/fonts
-
+append styles
+  link(rel="stylesheet" href=fontsUrl)
 block data
   include ../data/index
-
 block header
   include ../components/header
-
 block content
   include ../components/sections/hero
   include ../components/sections/works
@@ -23,6 +20,5 @@ block content
   include ../components/sections/stats
   include ../components/sections/clients
   include ../components/sections/journal
-
 block footer
   include ../components/footer
