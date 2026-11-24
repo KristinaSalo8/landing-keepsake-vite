@@ -1,22 +1,30 @@
 header.header
   .container.header__inner
-    a.logo(href="#top" aria-label="Keepsake — home")
-      span.logo__mark(aria-hidden="true") K
-      span.logo__text(aria-hidden="true") eepsake
-    input#nav-toggle.nav-toggle(type="checkbox" aria-label="Open menu" aria-controls="site-menu")
-    span.burger(aria-hidden="true")
+    a.logo(href='#top', aria-label='Keepsake — home')
+      span.logo__mark(aria-hidden='true') K
+      span.logo__text(aria-hidden='true') eepsake
+    input#nav-toggle.nav-toggle(
+      type='checkbox',
+      aria-label='Open menu',
+      aria-controls='site-menu'
+    )
+    span.burger(aria-hidden='true')
       each _ in [1, 2, 3]
         span.burger__line
-    nav#site-menu.menu(aria-label="Main")
+    nav#site-menu.menu(aria-label='Main')
       ul.menu__list
         each item in navItems
           li.menu__item
-            a.menu__link(href=item.href class={'is-active': item.active} aria-current=(item.active ? 'page' : false))
+            a.menu__link(
+              href=item.href,
+              class={ 'is-active': item.active },
+              aria-current=item.active ? 'page' : false
+            )
               = item.text
-              +icon('chevron')(class="menu__chev")
+              +icon('chevron').menu__chev
       .menu__extra
-        +btn('Contact us', '#contact', ['primary', 'block'], 'mail')(class="menu__btn")
-        +btn('Favourites', '#', ['secondary', 'block'], 'heart')(class="menu__btn")
+        +btn('Contact us', '#contact', ['primary', 'block'], 'mail').menu__btn
+        +btn('Favourites', '#', ['secondary', 'block'], 'heart').menu__btn
         .menu__contacts
           p.menu__hello Say hello
           p.menu__line
@@ -24,5 +32,5 @@ header.header
           p.menu__line
             a(href=`tel:${contacts.phoneHref}`)= contacts.phone
           +social-list
-    a.fav(href="#" aria-label="Favourites")
+    a.fav(href='#', aria-label='Favourites')
       +icon('heart')

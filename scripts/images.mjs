@@ -15,7 +15,9 @@ const FORMATS = [
 
 await mkdir(OUTPUT_DIR, { recursive: true });
 
-const files = (await readdir(SOURCE_DIR)).filter((file) => file.endsWith('.jpg'));
+const files = (await readdir(SOURCE_DIR)).filter((file) =>
+  file.endsWith('.jpg'),
+);
 
 for (const file of files) {
   const name = path.parse(file).name;

@@ -26,15 +26,21 @@
   @include focus-ring(var(--color-text-dark), 2px);
 }
 
-.filter__input--branding:checked ~ .works__grid .card:not([data-category='branding']) {
+.filter__input--branding:checked
+  ~ .works__grid
+  .card:not([data-category='branding']) {
   display: none;
 }
 
-.filter__input--identity:checked ~ .works__grid .card:not([data-category='identity']) {
+.filter__input--identity:checked
+  ~ .works__grid
+  .card:not([data-category='identity']) {
   display: none;
 }
 
-.filter__input--print:checked ~ .works__grid .card:not([data-category='print']) {
+.filter__input--print:checked
+  ~ .works__grid
+  .card:not([data-category='print']) {
   display: none;
 }
 
@@ -42,6 +48,8 @@
   display: none;
 }
 
-.filter__input--motion:checked ~ .works__grid .card:not([data-category='motion']) {
+.filter__input--motion:checked
+  ~ .works__grid
+  .card:not([data-category='motion']) {
   display: none;
 }

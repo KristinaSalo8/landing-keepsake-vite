@@ -2,4 +2,8 @@ mixin social-list
   ul.socials&attributes(attributes)
     each social in socials
       li.socials__item
-        a.social(href=social.href class=`social--${social.id}` aria-label=social.label)= social.id
+        a.social(
+          href=social.href,
+          class=`social--${social.id}`,
+          aria-label=social.label
+        )= social.id

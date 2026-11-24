@@ -14,22 +14,33 @@ footer.footer
                     span= link.text
       #newsletter.newsletter
         h2.footer__title Newsletter
-        form.newsletter__form(action="#newsletter" method="get")
+        form.newsletter__form(action='#newsletter', method='get')
           p.newsletter__text Fresh case studies and design notes, once a month.
-          label.visually-hidden(for="email") Your email address
-          input.newsletter__input(autocomplete="email" type="email" id="email" name="email" placeholder="Your email address" required aria-describedby="email-error")
-          button.btn.btn--primary.btn--block.newsletter__submit(type="submit") Subscribe
+          label.visually-hidden(for='email') Your email address
+          input#email.newsletter__input(
+            autocomplete='email',
+            type='email',
+            name='email',
+            placeholder='Your email address',
+            required,
+            aria-describedby='email-error'
+          )
+          button.btn.btn--primary.btn--block.newsletter__submit(type='submit') Subscribe
           p#email-error.newsletter__error Please enter a valid email address.
           .newsletter__agree
-            input.newsletter__check(type="checkbox" id="agree" name="agree" required)
-            label(for="agree") I agree to the privacy policy
-        .newsletter__success(role="status")
+            input#agree.newsletter__check(
+              type='checkbox',
+              name='agree',
+              required
+            )
+            label(for='agree') I agree to the privacy policy
+        .newsletter__success(role='status')
           p.newsletter__ok
             +icon('check')
             span You’re in! Check your inbox to confirm.
           p.newsletter__note One email a month. No spam, unsubscribe anytime.
     .footer__bottom
       p.footer__copy= copyright
-      +social-list()(class="footer__socials")
-a.to-top(href="#top" aria-label="Back to top")
+      +social-list.footer__socials
+a.to-top(href='#top', aria-label='Back to top')
   +icon('arrow-up')

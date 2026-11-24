@@ -1,19 +1,23 @@
-section.clients.section(aria-labelledby="clients-title")
+section.clients.section(aria-labelledby='clients-title')
   .container
-    +section-head('Clients & kind words', 'clients-title', 'Some of the teams that trusted us with their brands.')
+    +section-head(
+      'Clients & kind words',
+      'clients-title',
+      'Some of the teams that trusted us with their brands.',
+    )
     ul.clients__list
       each client in clients
         li.client
           span.client__logo(class=`client__logo--${client.key}`)= client.name
     figure.testimonial
-      span.testimonial__mark(aria-hidden="true") “
+      span.testimonial__mark(aria-hidden='true') “
       blockquote.testimonial__quote
         p= testimonial.quote
-      span.dots(aria-hidden="true")
+      span.dots(aria-hidden='true')
         each _, i in [0, 1, 2]
-          span.dots__item(class={'is-active': i === 0})
+          span.dots__item(class={ 'is-active': i === 0 })
       figcaption.testimonial__author
-        span.avatar(aria-hidden="true")= testimonial.initials
+        span.avatar(aria-hidden='true')= testimonial.initials
         span.testimonial__who
           span.testimonial__name= testimonial.name
           span.testimonial__role= testimonial.role

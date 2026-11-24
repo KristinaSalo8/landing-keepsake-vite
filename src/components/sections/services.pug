@@ -1,6 +1,10 @@
-section#services.services.section(aria-labelledby="services-title")
+section#services.services.section(aria-labelledby='services-title')
   .container
-    +section-head('What do we do', 'services-title', 'We are a small team of designers and makers who help brands look their best online and offline.')
+    +section-head(
+      'What do we do',
+      'services-title',
+      'We are a small team of designers and makers who help brands look their best online and offline.',
+    )
     ul.services__list
       each service in services
         li.service

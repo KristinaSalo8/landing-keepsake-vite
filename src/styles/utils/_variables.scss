@@ -22,9 +22,20 @@ $colors: (
 );
 
 $fonts: (
-  'heading': ('Oswald', Arial, sans-serif),
-  'body': ('Open Sans', Arial, sans-serif),
-  'logo': ('Dancing Script', cursive),
+  'heading': (
+    'Oswald',
+    Arial,
+    sans-serif,
+  ),
+  'body': (
+    'Open Sans',
+    Arial,
+    sans-serif,
+  ),
+  'logo': (
+    'Dancing Script',
+    cursive,
+  ),
 );
 
 $container-max-width: 1100px;

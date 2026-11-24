@@ -1,12 +1,12 @@
 mixin work-card(work)
-  - const label = work.category.charAt(0).toUpperCase() + work.category.slice(1)
+  - const label = work.category.charAt(0).toUpperCase() + work.category.slice(1);
   li.card(data-category=work.category)
     article.card__box
       a.card__link(href=work.href || '#')
         +picture(work.image, work.alt, 800, 632, !work.eager, 'card__img')
-        div.card__overlay
-          span.card__plus(aria-hidden="true")
+        .card__overlay
+          span.card__plus(aria-hidden='true')
             +icon('plus')
           h3.card__title= work.title
-          span.card__line(aria-hidden="true")
+          span.card__line(aria-hidden='true')
           span.card__cat= label
