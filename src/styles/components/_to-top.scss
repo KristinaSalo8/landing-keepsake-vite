@@ -2,6 +2,7 @@
 
 .to-top {
   @include flex-center;
+
   position: fixed;
   right: 20px;
   bottom: 20px;

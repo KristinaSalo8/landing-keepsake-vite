@@ -20,16 +20,15 @@ $colors: (
   'footer-field': #38383c,
   'success-bg': #2d3b3d,
 );
-
 $fonts: (
   'heading': (
     'Oswald',
-    Arial,
+    arial,
     sans-serif,
   ),
   'body': (
     'Open Sans',
-    Arial,
+    arial,
     sans-serif,
   ),
   'logo': (
@@ -37,7 +36,6 @@ $fonts: (
     cursive,
   ),
 );
-
 $container-max-width: 1100px;
 $work-categories: (all, branding, identity, print, web, motion);
 $work-filters: (branding, identity, print, web, motion);

@@ -2,17 +2,21 @@
 
 .fav {
   display: none;
+
   @include mq(md) {
     @include flex-center;
+
     width: 36px;
     height: 36px;
     margin-left: 24px;
     background: var(--color-accent);
     color: var(--color-white);
+
     &:hover {
       background: var(--color-accent-hover);
     }
   }
+
   @include mq(lg) {
     margin-left: 40px;
   }

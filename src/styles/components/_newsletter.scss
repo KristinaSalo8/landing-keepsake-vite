@@ -91,6 +91,7 @@
     font-size: rem(12);
   }
 }
+
 .newsletter__form:has(.newsletter__input:user-invalid) .newsletter__error {
   display: block;
 }

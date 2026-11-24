@@ -3,27 +3,35 @@
 .card {
   flex: 0 0 100%;
   padding: calc(var(--gutter) / 2);
+
   &:nth-child(n + 6) {
     display: none;
   }
+
   @include mq(md) {
     flex-basis: 50%;
+
     &:nth-child(n + 6) {
       display: block;
     }
+
     &:nth-child(9) {
       display: none;
     }
   }
+
   @include mq(lg) {
     flex-basis: 33.3333%;
+
     &:nth-child(9) {
       display: block;
     }
   }
+
   &:focus-within .card__overlay {
     opacity: 1;
   }
+
   &__box {
     position: relative;
   }
@@ -34,21 +42,26 @@
     aspect-ratio: var(--card-ratio);
     overflow: hidden;
     background: var(--color-bg-light);
+
     &:hover .card__overlay,
     &:focus-visible .card__overlay {
       opacity: 1;
     }
+
     &:focus-visible {
       @include focus-ring(var(--color-teal), -4px);
     }
   }
+
   &__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   &__overlay {
     @include flex-center;
+
     position: absolute;
     inset: 0;
     flex-direction: column;
@@ -56,8 +69,10 @@
     text-align: center;
     opacity: 0;
   }
+
   &__plus {
     @include flex-center;
+
     width: 44px;
     height: 44px;
     margin-bottom: 14px;
@@ -65,6 +80,7 @@
     background: var(--color-teal);
     color: var(--color-white);
   }
+
   &__title {
     font-family: var(--font-heading);
     font-size: rem(18);
@@ -73,12 +89,14 @@
     text-transform: uppercase;
     color: var(--color-white);
   }
+
   &__line {
     width: 32px;
     height: 2px;
     margin: 12px 0 10px;
     background: var(--color-accent);
   }
+
   &__cat {
     font-size: rem(14);
     line-height: 1.2;

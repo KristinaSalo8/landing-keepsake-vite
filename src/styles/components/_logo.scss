@@ -9,6 +9,7 @@
 
   &__mark {
     @include flex-center;
+
     width: var(--fs-logo-k);
     height: var(--fs-logo-k);
     border-radius: 50%;

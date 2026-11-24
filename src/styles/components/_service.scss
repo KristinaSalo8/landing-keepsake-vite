@@ -12,6 +12,7 @@
 
   &__icon {
     @include flex-center;
+
     width: var(--service-icon);
     height: var(--service-icon);
     margin: 0 auto 18px;

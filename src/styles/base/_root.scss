@@ -4,9 +4,11 @@
   @each $name, $value in $colors {
     --color-#{$name}: #{$value};
   }
+
   @each $name, $value in $fonts {
     --font-#{$name}: #{$value};
   }
+
   --fs-h1: 26px;
   --fs-cta: 22px;
   --fs-nav: 12px;
