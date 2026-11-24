@@ -1,0 +1,105 @@
+@use '../utils' as *;
+
+.menu {
+  position: fixed;
+  inset: var(--header-h) 0 0;
+  display: none;
+  overflow-y: auto;
+  background: var(--color-white);
+
+  @include mq(md) {
+    position: static;
+    display: flex;
+    margin-left: auto;
+    overflow: visible;
+    background: none;
+  }
+
+  &__list {
+    padding: 0 var(--pad-x);
+
+    @include mq(md) {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+  }
+
+  &__item {
+    @include mq(md) {
+      margin-left: 24px;
+    }
+
+    @include mq(lg) {
+      margin-left: 40px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-family: var(--font-heading);
+    font-size: rem(22);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-text-dark);
+
+    @include mq(md) {
+      padding: 8px 0;
+      border: 0;
+      font-size: var(--fs-nav);
+      font-weight: 400;
+    }
+
+    &:hover,
+    &.is-active {
+      color: var(--color-accent);
+    }
+  }
+
+  &__chev {
+    color: var(--color-muted);
+
+    @include mq(md) {
+      display: none;
+    }
+  }
+  &__extra {
+    padding: 28px 0 0;
+
+    @include mq(md) {
+      display: none;
+    }
+  }
+
+  &__btn {
+    width: calc(100% - 2 * var(--pad-x));
+    margin: 0 var(--pad-x) 12px;
+  }
+
+  &__contacts {
+    margin-top: 40px;
+    padding: 28px var(--pad-x) 40px;
+    background: var(--color-bg-light);
+  }
+
+  &__hello {
+    margin-bottom: 14px;
+    font-family: var(--font-heading);
+    font-size: rem(12);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  &__line {
+    margin-bottom: 12px;
+    font-size: rem(15);
+    color: var(--color-text-dark);
+  }
+}

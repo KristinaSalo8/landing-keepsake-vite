@@ -1,0 +1,26 @@
+@use '../utils' as *;
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-logo);
+  font-weight: 700;
+  color: var(--color-text-dark);
+
+  &__mark {
+    @include flex-center;
+    width: var(--fs-logo-k);
+    height: var(--fs-logo-k);
+    border-radius: 50%;
+    background: var(--color-text-dark);
+    color: var(--color-white);
+    font-size: calc(var(--fs-logo-k) * 0.65);
+    line-height: 1;
+  }
+
+  &__text {
+    margin-left: 2px;
+    font-size: var(--fs-logo);
+    line-height: 1;
+  }
+}
