@@ -1,0 +1,27 @@
+@use '../utils' as *;
+
+.works {
+  &__head {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 28px;
+
+    @include mq(md) {
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(var(--gutter) / -2);
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+  }
+}

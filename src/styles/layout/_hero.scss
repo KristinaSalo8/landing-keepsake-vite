@@ -1,0 +1,46 @@
+@use '../utils' as *;
+
+.hero {
+  padding: 40px 0;
+  background: var(--color-bg-light);
+
+  @include mq(md) {
+    padding: 56px 0;
+  }
+
+  @include mq(lg) {
+    padding: 64px 0;
+  }
+
+  &__title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h1);
+    font-weight: 300;
+    line-height: 1.25;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-text-dark);
+  }
+
+  &__text {
+    margin: 16px 0 28px;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @include mq(md) {
+      flex-direction: row;
+    }
+  }
+
+  &__btn {
+    min-height: 44px;
+
+    @include mq(md) {
+      min-height: 40px;
+    }
+  }
+}

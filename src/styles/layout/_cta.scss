@@ -1,0 +1,21 @@
+.cta {
+  padding: 0 0 var(--section-y);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: var(--font-heading);
+    font-size: var(--fs-cta);
+    font-weight: 300;
+    line-height: 1.3;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-text-dark);
+  }
+}

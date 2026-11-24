@@ -1,0 +1,26 @@
+@use '../utils' as *;
+
+.chips {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 18px;
+  margin-right: calc(-1 * var(--pad-x));
+  padding-bottom: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include mq(md) {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+
+  &__item {
+    flex: none;
+    margin-right: 8px;
+  }
+}

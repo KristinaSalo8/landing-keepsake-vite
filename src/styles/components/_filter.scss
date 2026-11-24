@@ -1,0 +1,47 @@
+@use '../utils' as *;
+.filter__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.filter__input--all:checked ~ .works__head .chip--all,
+.filter__input--branding:checked ~ .works__head .chip--branding,
+.filter__input--identity:checked ~ .works__head .chip--identity,
+.filter__input--print:checked ~ .works__head .chip--print,
+.filter__input--web:checked ~ .works__head .chip--web,
+.filter__input--motion:checked ~ .works__head .chip--motion {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+.filter__input--all:focus-visible ~ .works__head .chip--all,
+.filter__input--branding:focus-visible ~ .works__head .chip--branding,
+.filter__input--identity:focus-visible ~ .works__head .chip--identity,
+.filter__input--print:focus-visible ~ .works__head .chip--print,
+.filter__input--web:focus-visible ~ .works__head .chip--web,
+.filter__input--motion:focus-visible ~ .works__head .chip--motion {
+  @include focus-ring(var(--color-text-dark), 2px);
+}
+
+.filter__input--branding:checked ~ .works__grid .card:not([data-category='branding']) {
+  display: none;
+}
+
+.filter__input--identity:checked ~ .works__grid .card:not([data-category='identity']) {
+  display: none;
+}
+
+.filter__input--print:checked ~ .works__grid .card:not([data-category='print']) {
+  display: none;
+}
+
+.filter__input--web:checked ~ .works__grid .card:not([data-category='web']) {
+  display: none;
+}
+
+.filter__input--motion:checked ~ .works__grid .card:not([data-category='motion']) {
+  display: none;
+}

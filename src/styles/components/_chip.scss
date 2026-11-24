@@ -1,0 +1,21 @@
+@use '../utils' as *;
+
+.chip {
+  display: block;
+  padding: 9px 14px;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: var(--fs-nav);
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-text-dark);
+  cursor: pointer;
+  @include transition-safe(color 0.2s, border-color 0.2s, background-color 0.2s);
+
+  &:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+}
