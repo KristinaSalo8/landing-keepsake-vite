@@ -3,15 +3,16 @@
     each client in clients
       li.client
         span.client__logo(class=`logo-${client.key}`)= client.name
+  //- figcaption має бути першою або останньою дитиною figure, тому .dots стоїть перед нею (візуально переносимо вниз через CSS order)
   figure.testimonial
     span.testimonial__mark(aria-hidden="true") “
     blockquote.testimonial__quote
       p= testimonial.quote
+    span.dots(aria-hidden="true")
+      each _, i in [0, 1, 2]
+        span.dots__item(class={'is-active': i === 0})
     figcaption.testimonial__author
       span.avatar(aria-hidden="true")= testimonial.initials
       span.testimonial__who
         span.testimonial__name= testimonial.name
         span.testimonial__role= testimonial.role
-    span.dots(aria-hidden="true")
-      each _, i in [0, 1, 2]
-        span.dots__item(class={'is-active': i === 0})
