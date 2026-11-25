@@ -2,8 +2,10 @@ import vituum from 'vituum';
 import pug from '@vituum/vite-plugin-pug';
 import path from 'path';
 
-export default {
-  base: '/landing-keepsake-vite/',
+const base = '/landing-keepsake-vite/';
+
+export default ({ mode }) => ({
+  base: mode === 'production' ? base : '/',
   plugins: [
     vituum({
       imports: {
@@ -21,4 +23,4 @@ export default {
       '@assets': path.resolve(import.meta.dirname, 'src/assets'),
     },
   },
-};
+});
